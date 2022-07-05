@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: tool-benchmarking-suite
+spec:
+  template:
+    spec:
+      containers:
+        - name: service
+          image:
+          envFrom:
+            - secretRef:
+                name: "tool-benchmarking-suite"
+            - configMapRef:
+                name: "tool-benchmarking-suite"
+          resources:
+            requests:
+              cpu: 256m
+              memory: 512Mi
+            limits:
+              memory: 512Mi
+      restartPolicy: Never

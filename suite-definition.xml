@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.2-->
+<PhoronixTestSuite>
+  <SuiteInformation>
+    <Title>container_benchmark</Title>
+    <Version>1.0.0</Version>
+    <TestType>Other</TestType>
+    <Description>Internal AG Testing Suite</Description>
+    <Maintainer>TAB</Maintainer>
+  </SuiteInformation>
+  <Execute>
+    <Test>pts/compress-7zip-1.8.0</Test>
+  </Execute>
+  <Execute>
+    <Test>pts/mbw-1.0.0</Test>
+    <Arguments>-t0 128</Arguments>
+    <Description>Test: Memory Copy - Array Size: 128 MiB</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>COPY -b 6</Arguments>
+    <Description>Type: Copy - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>SCALE -b 6</Arguments>
+    <Description>Type: Scale - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>ADD -b 6</Arguments>
+    <Description>Type: Add - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>TRIAD -b 6</Arguments>
+    <Description>Type: Triad - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>AVERAGE -b 6</Arguments>
+    <Description>Type: Average - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/fs-mark-1.0.3</Test>
+    <Arguments>-L 20 -s 1048576 -n 1000</Arguments>
+    <Description>Test: 1000 Files, 1MB Size</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t set</Arguments>
+    <Description>Test: SET</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t get</Arguments>
+    <Description>Test: GET</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t lpush</Arguments>
+    <Description>Test: LPUSH</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t lpop</Arguments>
+    <Description>Test: LPOP</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t sadd</Arguments>
+    <Description>Test: SADD</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/m-queens-1.1.0</Test>
+  </Execute>
+</PhoronixTestSuite>

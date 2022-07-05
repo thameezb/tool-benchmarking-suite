@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  EXECUTION_TYPE: eks_ec2
+  AWS_ACCESS_KEY_ID:
+kind: ConfigMap
+metadata:   
+  name: tool-benchmarking-suite
